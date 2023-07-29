@@ -1,0 +1,3 @@
+dependencies {
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.3'
+}
