@@ -6,7 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.fge.jsonpatch.JsonPatch;
 import com.github.fge.jsonpatch.JsonPatchException;
 import com.mjc.school.controller.BaseController;
+import com.mjc.school.service.AuthorService;
+import com.mjc.school.service.CommentService;
 import com.mjc.school.service.NewsService;
+import com.mjc.school.service.TagService;
 import com.mjc.school.service.dto.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,11 +28,17 @@ import java.util.stream.Collectors;
 @Api(produces = "application/json", value = "Operations for creating, updating, retrieving and deleting news in the application")
 public class NewsController implements BaseController<NewsRequestDTO, NewsResponseDTO, Long> {
     private final NewsService service;
+    private final TagService tagService;
+    private final CommentService commentService;
+    private final AuthorService authorService;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Autowired
-    public NewsController(NewsService newsService) {
+    public NewsController(NewsService newsService, TagService tagService, CommentService commentService, AuthorService authorService) {
         this.service = newsService;
+        this.tagService = tagService;
+        this.commentService = commentService;
+        this.authorService = authorService;
     }
 
     @Override
@@ -123,6 +132,28 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
                             @RequestParam(name = "content", required = false) String content){
         return new ResponseEntity<>(service.readByParams(tagId, tagName, authorName, title, content), HttpStatus.OK);
     }
+
+    @GetMapping("/{id:\\d+}/tags")
+    @ApiOperation(value = "Retrieve tags of specified news", response = List.class)
+    public ResponseEntity<List<TagResponseDTO>> readTagsByNewsId(@PathVariable Long id) {
+        List<TagResponseDTO> tags = tagService.getTagsByNewsId(id);
+        return new ResponseEntity<>(tags, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id:\\d+}/comments")
+    @ApiOperation(value = "Retrieve comments of specified news", response = List.class)
+    public ResponseEntity<List<CommentResponseDTO>> readCommentsByNewsId(@PathVariable Long id) {
+        List<CommentResponseDTO> commentsDTO = commentService.getCommentsByNewsId(id);
+        return new ResponseEntity<>(commentsDTO, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id:\\d+}/author")
+    @ApiOperation(value = "Retrieve the author of specified news", response = List.class)
+    public ResponseEntity<AuthorResponseDTO> readAuthorByNewsId(@PathVariable Long id) {
+        AuthorResponseDTO authorDTO = authorService.getAuthorByNewsId(id);
+        return new ResponseEntity<>(authorDTO, HttpStatus.OK);
+    }
+
 
     @PatchMapping(path = "/{id:\\d+}", consumes = "application/json-patch+json")
     @ApiOperation(value = "Partly update news information", response = AuthorResponseDTO.class)

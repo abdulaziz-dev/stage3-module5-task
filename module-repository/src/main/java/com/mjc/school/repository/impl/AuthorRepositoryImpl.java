@@ -17,4 +17,6 @@ public class AuthorRepositoryImpl extends AbstractRepository<AuthorModel, Long> 
         NewsModel news = entityManager.find(NewsModel.class, newsId);
         return news.getAuthor();
     }
+
+
 }

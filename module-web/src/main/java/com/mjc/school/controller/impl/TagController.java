@@ -66,12 +66,6 @@ public class TagController implements BaseController<TagRequestDTO, TagResponseD
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<List<TagResponseDTO>> readByNewsId(@RequestParam(name = "news_id") Long newsId) {
-        List<TagResponseDTO> tags = service.getTagsByNewsId(newsId);
-        return new ResponseEntity<>(tags, HttpStatus.OK);
-    }
-
     @Override
     @PostMapping
     @ApiOperation(value = "Create a new tag", response = TagResponseDTO.class)

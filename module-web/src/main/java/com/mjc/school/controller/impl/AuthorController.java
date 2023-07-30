@@ -62,14 +62,6 @@ public class AuthorController implements BaseController<AuthorRequestDTO, Author
         return new ResponseEntity<>(authorDTO, HttpStatus.OK);
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<AuthorResponseDTO> readByNewsId(
-                                                @RequestParam(name = "news_id") Long newsId)
-    {
-        AuthorResponseDTO authorDTO = service.getAuthorByNewsId(newsId);
-        return new ResponseEntity<>(authorDTO, HttpStatus.OK);
-    }
-
     @Override
     @PostMapping
     @ApiOperation(value = "Create a new author", response = AuthorResponseDTO.class)

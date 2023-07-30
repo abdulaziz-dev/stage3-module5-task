@@ -62,12 +62,6 @@ public class CommentController implements BaseController<CommentRequestDTO, Comm
         return new ResponseEntity<>(commentDTO, HttpStatus.OK);
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<List<CommentResponseDTO>> readByNewsId(@RequestParam(name = "news_id") Long newsId) {
-        List<CommentResponseDTO> commentsDTO = service.getCommentsByNewsId(newsId);
-        return new ResponseEntity<>(commentsDTO, HttpStatus.OK);
-    }
-
 
     @Override
     @PostMapping
