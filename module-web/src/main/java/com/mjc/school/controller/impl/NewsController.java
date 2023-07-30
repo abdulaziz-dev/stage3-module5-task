@@ -43,7 +43,7 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
 
     @Override
     @GetMapping
-    @ApiOperation(value = "View all news", response = List.class)
+    @ApiOperation(value = "View all news", response = ResponseEntity.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved all news"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -61,7 +61,7 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
 
     @Override
     @GetMapping("/{id:\\d+}")
-    @ApiOperation(value = "Retrieve specific news with the supplied id", response = NewsResponseDTO.class)
+    @ApiOperation(value = "Retrieve specific news with the supplied id", response = ResponseEntity.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved the news with the supplied id"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -75,7 +75,7 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
 
     @Override
     @PostMapping
-    @ApiOperation(value = "Create a piece of news", response = NewsResponseDTO.class)
+    @ApiOperation(value = "Create a piece of news", response = ResponseEntity.class)
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Successfully created a piece of news"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -90,7 +90,7 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
 
     @Override
     @PutMapping("/{id:\\d+}")
-    @ApiOperation(value = "Update news with provided id", response = NewsResponseDTO.class)
+    @ApiOperation(value = "Update news with provided id", response = ResponseEntity.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully updated news information"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -117,7 +117,7 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
     }
 
     @GetMapping("/search")
-    @ApiOperation(value = "Retrieve news with provided parameters", response = List.class)
+    @ApiOperation(value = "Retrieve news with provided parameters", response = ResponseEntity.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved the news with given parameters"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
@@ -134,26 +134,43 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
     }
 
     @GetMapping("/{id:\\d+}/tags")
-    @ApiOperation(value = "Retrieve tags of specified news", response = List.class)
+    @ApiOperation(value = "Retrieve tags of specified news", response = ResponseEntity.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successfully retrieved tags of specific news"),
+            @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+            @ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
+            @ApiResponse(code = 500, message = "Application failed to process the request")
+    })
     public ResponseEntity<List<TagResponseDTO>> readTagsByNewsId(@PathVariable Long id) {
         List<TagResponseDTO> tags = tagService.getTagsByNewsId(id);
         return new ResponseEntity<>(tags, HttpStatus.OK);
     }
 
     @GetMapping("/{id:\\d+}/comments")
-    @ApiOperation(value = "Retrieve comments of specified news", response = List.class)
+    @ApiOperation(value = "Retrieve comments of specified news", response = ResponseEntity.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successfully retrieved comments of specific news"),
+            @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+            @ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
+            @ApiResponse(code = 500, message = "Application failed to process the request")
+    })
     public ResponseEntity<List<CommentResponseDTO>> readCommentsByNewsId(@PathVariable Long id) {
         List<CommentResponseDTO> commentsDTO = commentService.getCommentsByNewsId(id);
         return new ResponseEntity<>(commentsDTO, HttpStatus.OK);
     }
 
     @GetMapping("/{id:\\d+}/author")
-    @ApiOperation(value = "Retrieve the author of specified news", response = List.class)
+    @ApiOperation(value = "Retrieve the author of specified news", response = ResponseEntity.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Successfully retrieved the author of specific news"),
+            @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+            @ApiResponse(code = 404, message = "The resource you were trying to reach is not found"),
+            @ApiResponse(code = 500, message = "Application failed to process the request")
+    })
     public ResponseEntity<AuthorResponseDTO> readAuthorByNewsId(@PathVariable Long id) {
         AuthorResponseDTO authorDTO = authorService.getAuthorByNewsId(id);
         return new ResponseEntity<>(authorDTO, HttpStatus.OK);
     }
-
 
     @PatchMapping(path = "/{id:\\d+}", consumes = "application/json-patch+json")
     @ApiOperation(value = "Partly update news information", response = AuthorResponseDTO.class)
