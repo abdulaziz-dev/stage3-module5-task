@@ -1,5 +1,6 @@
 plugins {
     id 'java-base'
+    id 'org.sonarqube' version "4.2.0.3129"
 }
 
 wrapper {
@@ -42,6 +43,12 @@ subprojects {
     }
     test {
         useJUnitPlatform()
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
     }
 }
 
