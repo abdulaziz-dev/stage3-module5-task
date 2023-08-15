@@ -1,4 +1,4 @@
-package com.mjc.school.controller;
+package com.mjc.school.controller.constants;
 
 public enum Operations {
     GET_ALL_NEWS(1, "Get all news."),

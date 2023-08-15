@@ -1,3 +1,20 @@
+plugins {
+    id 'java-library'
+    id "org.springframework.boot" version "${springBootVersion}"
+    id 'war'
+}
+
 dependencies {
     implementation project(':module-service')
+
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation 'com.github.java-json-tools:json-patch:1.13'
+    testImplementation 'io.rest-assured:rest-assured:5.3.1'
+
+    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat:$springWebVersion"
+
+}
+
+war {
+    enabled = true
 }
