@@ -1,3 +1,15 @@
+plugins {
+    id "org.springframework.boot" version "${springBootVersion}"
+}
+
 dependencies {
     implementation project(':module-repository')
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
 }
