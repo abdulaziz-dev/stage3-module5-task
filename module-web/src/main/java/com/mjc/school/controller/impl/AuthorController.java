@@ -103,7 +103,7 @@ public class AuthorController implements BaseController<AuthorRequestDTO, Author
     public ResponseEntity<AuthorResponseDTO> updatePart(@PathVariable("id") Long id, @RequestBody JsonPatch patch) {
         try {
             AuthorResponseDTO author = service.readById(id);
-            AuthorRequestDTO request = new AuthorRequestDTO(author.id(), author.name());
+            AuthorRequestDTO request = new AuthorRequestDTO(author.name());
             AuthorRequestDTO patchedAuthor = applyPatch(patch, request);
 
             return new ResponseEntity<>(service.update(patchedAuthor),HttpStatus.OK);

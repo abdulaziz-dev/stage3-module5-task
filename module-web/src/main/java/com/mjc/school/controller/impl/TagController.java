@@ -106,7 +106,7 @@ public class TagController implements BaseController<TagRequestDTO, TagResponseD
     public ResponseEntity<TagResponseDTO> updatePart(@PathVariable("id") Long id, @RequestBody JsonPatch patch) {
         try {
             TagResponseDTO tag = service.readById(id);
-            TagRequestDTO requestTag = new TagRequestDTO(tag.id(), tag.name());
+            TagRequestDTO requestTag = new TagRequestDTO(tag.name());
             TagRequestDTO patchedTag = applyPatchToTag(patch, requestTag);
             return new ResponseEntity<>(service.update(patchedTag),HttpStatus.OK);
         }

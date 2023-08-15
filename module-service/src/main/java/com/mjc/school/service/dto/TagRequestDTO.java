@@ -1,4 +1,4 @@
 package com.mjc.school.service.dto;
 
-public record TagRequestDTO(Long id, String name) {
+public record TagRequestDTO(String name) {
 }

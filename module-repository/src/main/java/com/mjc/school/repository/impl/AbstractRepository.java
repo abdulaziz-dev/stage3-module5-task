@@ -13,6 +13,7 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("unchecked")
 public abstract class AbstractRepository<T extends BaseEntity<K>, K> implements BaseRepository<T, K> {
     @PersistenceContext
     protected EntityManager entityManager;

@@ -19,7 +19,8 @@ public interface CommentModelMapper {
 
     @Mappings(value = {@Mapping(target = "createDate", ignore = true),
             @Mapping(target = "lastUpdateDate", ignore = true),
-            @Mapping(target = "news", ignore = true)
+            @Mapping(target = "news", ignore = true),
+            @Mapping(target = "id", ignore = true)
     })
     CommentModel dtoToModel (CommentRequestDTO requestDTO);
 }

@@ -16,6 +16,7 @@ public interface TagModelMapper {
     List<TagResponseDTO> modelListToDtoList(List<TagModel> modelList);
 
     @Mapping(target = "news", ignore = true)
+    @Mapping(target = "id", ignore = true)
     TagModel dtoToModel(TagRequestDTO dto);
 
 }

@@ -104,7 +104,7 @@ public class CommentController implements BaseController<CommentRequestDTO, Comm
     public ResponseEntity<CommentResponseDTO> updatePart(@PathVariable("id") Long id, @RequestBody JsonPatch patch) {
         try {
             CommentResponseDTO comment = service.readById(id);
-            CommentRequestDTO request = new CommentRequestDTO(comment.id(), comment.content(), comment.newsId());
+            CommentRequestDTO request = new CommentRequestDTO(comment.content(), comment.newsId());
             CommentRequestDTO patchedComment = applyPatch(patch, request);
 
             return new ResponseEntity<>(service.update(patchedComment),HttpStatus.OK);

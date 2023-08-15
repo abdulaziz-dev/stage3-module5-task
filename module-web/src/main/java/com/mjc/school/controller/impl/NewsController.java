@@ -183,7 +183,7 @@ public class NewsController implements BaseController<NewsRequestDTO, NewsRespon
     public ResponseEntity<NewsResponseDTO> updatePart(@PathVariable("id") Long id, @RequestBody JsonPatch patch) {
         try {
             NewsResponseDTO news = service.readById(id);
-            NewsRequestDTO request = new NewsRequestDTO(news.id(), news.title(), news.content(), news.authorId(),
+            NewsRequestDTO request = new NewsRequestDTO(news.title(), news.content(), news.authorId(),
                                                         news.tagsSet().stream().map(x-> x.id()).collect(Collectors.toSet()));
             NewsRequestDTO patchedNews = applyPatch(patch, request);
             return new ResponseEntity<>(service.update(patchedNews),HttpStatus.OK);
