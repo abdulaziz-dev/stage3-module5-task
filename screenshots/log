@@ -1,0 +1,217 @@
+Started by user [8mha:////4LAFcro/0JgCbV422YDmz18Kx/ibMFMV3BMJrWCQz00HAAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzBEgYR/dLi1CL9xKSU0pzEqsyqeCMDA0MAGK0crskAAAA=[0mAxmedov Abdulaziz
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/abdulaziz-dev/stage3-module5-task.git
+ > git.exe init C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task # timeout=10
+Fetching upstream changes from https://github.com/abdulaziz-dev/stage3-module5-task.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.41.0.windows.3'
+ > git.exe fetch --tags --force --progress -- https://github.com/abdulaziz-dev/stage3-module5-task.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/abdulaziz-dev/stage3-module5-task.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 316f4f6e929453c4486c31f363e91a171803edf7 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 316f4f6e929453c4486c31f363e91a171803edf7 # timeout=10
+Commit message: "sonar inclusions"
+ > git.exe rev-list --no-walk 6fbde6045baddfa7aa4073e0f7fa4316e5536352 # timeout=10
+[Gradle] - Launching build.
+[CI_CD_Task] $ cmd.exe /C '""E:\C disk\gradle\bin\gradle.bat"' clean build test && exit %%ERRORLEVEL%%"
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :clean UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:clean UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:clean UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:clean UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :compileJava NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :processResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :classes UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :resolveMainClassName
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :bootJar SKIPPED
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :jar
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :assemble
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :compileTestJava NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :processTestResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :testClasses UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :test NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :check UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :build
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:compileJava
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:processResources
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:classes
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:resolveMainClassName
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:bootJar SKIPPED
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:jar
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:assemble
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:compileTestJava NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:processTestResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:testClasses UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:test NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:check UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:build
+
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:compileJava
+C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\module-service\src\main\java\com\mjc\school\service\mapper\NewsModelMapper.java:15: warning: Unmapped target property: "sSet".
+    NewsResponseDTO modelToDTO(NewsModel newsModel);
+                    ^
+1 warning
+
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:processResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:classes
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:resolveMainClassName
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:bootJar SKIPPED
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:jar
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:assemble
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:compileTestJava
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:processTestResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:testClasses
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:test
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:check
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:build
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:compileJava
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:processResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:classes
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:resolveMainClassName
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:bootWar
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:war
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:assemble
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:compileTestJava NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:processTestResources NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:testClasses UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:test NO-SOURCE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:check UP-TO-DATE
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:build
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-repository:jacocoTestReport SKIPPED
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-service:jacocoTestReport
+[8mha:////4MbSGsuaaeNuDs4IxwmNydf8Y2qMvxCt7i8hREBAZdciAAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpCqzh62PfDo/h4mBoaKIQQqqJTk/rzgfqNYZQoMUMkAAI0hhAQASWqbMYgAAAA==[0m> Task :module-web:jacocoTestReport SKIPPED
+
+[8mha:////4GyTs/GcNEf51j/MwTsleA5AZUXstBoIU5ttx0sv4OG2AAAAYx+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUz5l5Yk5+em+uWXpNbNmqZ4mHPZIiYGhooiBimoruT8vOJ8oHJnCA1SyAABjCCFBQBI197DZQAAAA==[0mBUILD SUCCESSFUL in 30s
+20 actionable tasks: 16 executed, 4 up-to-date
+Build step 'Invoke Gradle script' changed build result to SUCCESS
+[CI_CD_Task] $ C:\ProgramData\Jenkins\.jenkins\tools\hudson.plugins.sonar.SonarRunnerInstallation\SonarScanner\bin\sonar-scanner.bat -Dsonar.projectBaseDir=C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task
+INFO: Scanner configuration file: C:\ProgramData\Jenkins\.jenkins\tools\hudson.plugins.sonar.SonarRunnerInstallation\SonarScanner\bin\..\conf\sonar-scanner.properties
+INFO: Project root configuration file: C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\sonar-project.properties
+INFO: SonarScanner 5.0.1.3006
+INFO: Java 17.0.6 Oracle Corporation (64-bit)
+INFO: Windows 10 10.0 amd64
+INFO: User cache: C:\Windows\system32\config\systemprofile\.sonar\cache
+INFO: Analyzing on SonarQube server 10.1.0.73491
+INFO: Default locale: "ru_RU", source code encoding: "windows-1251" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=243ms
+INFO: Server id: 147B411E-AYnQLZJ4bd5rSnj3Oph2
+INFO: User cache: C:\Windows\system32\config\systemprofile\.sonar\cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=132ms
+INFO: Load/download plugins (done) | time=360ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=31ms
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=3ms
+INFO: Project key: sonar_task
+INFO: Base dir: C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task
+INFO: Working dir: C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\.scannerwork
+INFO: Load project settings for component key: 'sonar_task'
+INFO: Load project settings for component key: 'sonar_task' (done) | time=69ms
+INFO: Auto-configuring with CI 'Jenkins'
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=923ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=10111ms
+INFO: Load analysis cache
+INFO: Load analysis cache | time=30ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=76ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Included sources: **/src/**
+INFO: 51 files indexed
+INFO: 122 files ignored because of inclusion/exclusion patterns
+INFO: 0 files ignored because of scm ignore settings
+INFO: Quality profile for java: Sonar way
+INFO: ------------- Run sensors on module 'sonar_task'
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=54ms
+INFO: Sensor JavaSensor [java]
+INFO: JavaClasspath initialization
+INFO: JavaClasspath initialization (done) | time=26ms
+INFO: JavaTestClasspath initialization
+INFO: JavaTestClasspath initialization (done) | time=0ms
+INFO: Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+INFO: Using ECJ batch to parse 50 Main java source files with batch size 52 KB.
+INFO: Starting batch processing.
+INFO: The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+INFO: 100% analyzed
+INFO: Batch processing: Done.
+INFO: Did not optimize analysis for any files, performed a full analysis for all 50 files.
+WARN: Dependencies/libraries were not provided for analysis of SOURCE files. The 'sonar.java.libraries' property is empty. Verify your configuration, as you might end up with less precise results.
+WARN: Unresolved imports/types have been detected during analysis. Enable DEBUG mode to see them.
+WARN: Use of preview features have been detected during analysis. Enable DEBUG mode to see them.
+INFO: No "Test" source files to scan.
+INFO: No "Generated" source files to scan.
+INFO: Sensor JavaSensor [java] (done) | time=5824ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: Importing 1 report(s). Turn your logs in debug mode in order to see the exhaustive list.
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=185ms
+INFO: Sensor CSS Rules [javascript]
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=1ms
+INFO: Sensor C# Project Type Information [csharp]
+INFO: Sensor C# Project Type Information [csharp] (done) | time=1ms
+INFO: Sensor C# Analysis Log [csharp]
+INFO: Sensor C# Analysis Log [csharp] (done) | time=40ms
+INFO: Sensor C# Properties [csharp]
+INFO: Sensor C# Properties [csharp] (done) | time=3ms
+INFO: Sensor SurefireSensor [java]
+INFO: parsing [C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\target\surefire-reports]
+INFO: Sensor SurefireSensor [java] (done) | time=6ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=13ms
+INFO: Sensor TextAndSecretsSensor [text]
+INFO: 50 source files to be analyzed
+INFO: 50/50 source files have been analyzed
+INFO: Sensor TextAndSecretsSensor [text] (done) | time=152ms
+INFO: Sensor VB.NET Project Type Information [vbnet]
+INFO: Sensor VB.NET Project Type Information [vbnet] (done) | time=1ms
+INFO: Sensor VB.NET Analysis Log [vbnet]
+INFO: Sensor VB.NET Analysis Log [vbnet] (done) | time=32ms
+INFO: Sensor VB.NET Properties [vbnet]
+INFO: Sensor VB.NET Properties [vbnet] (done) | time=0ms
+INFO: Sensor IaC Docker Sensor [iac]
+INFO: 0 source files to be analyzed
+INFO: 0/0 source files have been analyzed
+INFO: Sensor IaC Docker Sensor [iac] (done) | time=133ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Analysis Warnings import [csharp]
+INFO: Sensor Analysis Warnings import [csharp] (done) | time=1ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=39ms
+INFO: Sensor Java CPD Block Indexer
+INFO: Sensor Java CPD Block Indexer (done) | time=296ms
+INFO: CPD Executor 32 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 18 files
+INFO: CPD Executor CPD calculation finished (done) | time=50ms
+INFO: Analysis report generated in 299ms, dir size=285.6 kB
+INFO: Analysis report compressed in 585ms, zip size=126.2 kB
+INFO: Analysis report uploaded in 352ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=sonar_task
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://localhost:9000/api/ce/task?id=AYn93um6y6dOs2XzuhAN
+INFO: Analysis total time: 26.912 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 30.200s
+INFO: Final Memory: 24M/87M
+INFO: ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\module-web\build\libs\module-web-plain.war to container Tomcat 8.x Remote with context null
+  [C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\module-web\build\libs\module-web-plain.war] is not deployed. Doing a fresh deployment.
+  Deploying [C:\ProgramData\Jenkins\.jenkins\workspace\CI_CD_Task\module-web\build\libs\module-web-plain.war]
+Finished: SUCCESS
